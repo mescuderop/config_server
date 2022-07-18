@@ -1,4 +1,4 @@
 service:
   name: Client-Mariella-Service
-  server:
-    port: 8200
+server:
+  port: 8200
