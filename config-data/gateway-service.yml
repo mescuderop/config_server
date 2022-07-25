@@ -22,7 +22,7 @@ spring:
         - id: passive-service
           uri: lb://passive-service
           predicates:
-           - Path=/passive/**
+           - Path=/api/passive/**
         - id: reports-service
           uri: lb://reports-service
           predicates:
