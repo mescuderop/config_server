@@ -1,0 +1,29 @@
+server:
+  port: 8081
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      default-zone: http://localhost:8761/eureka
+  instance:
+    hostname: localhost
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: initial-service
+          uri: lb://initial-service
+          predicates:
+           - Path=/person/**
+        - id: passive-service
+          uri: lb://passive-service
+          predicates:
+           - Path=/movementPassive/**
+        - id: reports-service
+          uri: lb://reports-service
+          predicates:
+           - Path=/reportPassive/**
