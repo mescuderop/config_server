@@ -18,7 +18,7 @@ spring:
         - id: initial-service
           uri: lb://initial-service
           predicates:
-           - Path=/person/**
+           - Path=/api/person/**
         - id: passive-service
           uri: lb://passive-service
           predicates:
