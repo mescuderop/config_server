@@ -6,3 +6,11 @@ spring:
       database: dbBank
       host: 127.0.0.1
       port: 27017
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      default-zone: http://localhost:8761/eureka
+    instance:
+      hostname: localhost
