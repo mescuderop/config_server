@@ -27,3 +27,4 @@ spring:
           uri: lb://reports-service
           predicates:
            - Path=/api/reportPassive/**
+           
